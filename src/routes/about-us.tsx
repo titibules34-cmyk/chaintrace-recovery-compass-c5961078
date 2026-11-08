@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import certAcfeCfe from "@/assets/certs/acfe-cfe.png";
 import certTali from "@/assets/certs/tali.png";
@@ -77,9 +78,16 @@ const metrics = [
   { value: "Clear", label: "Evidence-led approach", detail: "Careful analysis. Practical direction." },
 ];
 
+const EXPERT_WORDS = ["Digital Asset Recovery", "Cyber Investigations", "Cryptocurrency Tracing", "Offshore Intelligence"];
+
 function AboutUs() {
+  const [word, setWord] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setWord((w) => (w + 1) % EXPERT_WORDS.length), 2200);
+    return () => clearInterval(t);
+  }, []);
   return (
-    <main className="about-page relative min-h-screen overflow-hidden px-4 pb-20 pt-28 text-foreground sm:px-6">
+    <main className="about-page relative min-h-screen overflow-hidden px-4 pb-20 pt-8 text-foreground sm:pt-10 sm:px-6">
       <style>{`
         @keyframes about-rise { from { opacity: 0; transform: translateY(28px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
         @keyframes about-glow { 0%,100% { opacity:.35; transform:scale(1); } 50% { opacity:.65; transform:scale(1.12); } }
@@ -118,9 +126,10 @@ function AboutUs() {
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/[.08] px-4 py-1.5 text-[.68rem] font-bold tracking-[.2em] text-cyan-200">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.9)]" /> WHO WE ARE
           </span>
-          <h1 className="mt-5 text-5xl font-extrabold tracking-tight text-white sm:text-7xl">About Us</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-xl font-semibold leading-snug text-blue-100/75 sm:text-3xl">
-            Experts in <span className="about-word-window bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"><span className="about-word">Cyber Investigations</span><span className="about-word">Cryptocurrency Tracing</span><span className="about-word">Offshore Intelligence</span></span>
+          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">About Us</h1>
+          <p className="mx-auto mt-4 max-w-3xl min-h-[3.5rem] text-lg font-semibold leading-snug text-blue-100/75 sm:min-h-0 sm:text-2xl">
+            Experts in{" "}
+            <span className="block sm:inline"><span key={word} className="word-swap inline-block bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">{EXPERT_WORDS[word]}</span></span>
           </p>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-blue-100/60 sm:text-base">
             Bringing clarity to complex digital investigations through intelligence, rigorous analysis and evidence-led action.
@@ -131,7 +140,7 @@ function AboutUs() {
           <div className="flex items-start gap-4">
             <span className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 sm:flex"><Scale className="h-6 w-6" /></span>
             <div>
-              <p className="text-lg font-semibold leading-8 text-white sm:text-xl">
+              <p className="text-base font-semibold leading-7 text-white sm:text-xl sm:leading-8">
                 Cyber Justice is a specialist cyber intelligence and digital investigations company. We help individuals, businesses and professional teams make sense of complex online activity, trace digital assets and develop clear investigative leads.
               </p>
               <p className="mt-4 max-w-5xl leading-7 text-blue-100/75">
