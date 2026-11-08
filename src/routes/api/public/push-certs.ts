@@ -14,8 +14,8 @@ export const Route = createFileRoute("/api/public/push-certs")({
         if (url.searchParams.get("token") !== TOKEN) {
           return Response.json({ error: "forbidden" }, { status: 403 });
         }
-        const lovKey = process.env.LOVABLE_API_KEY;
-        const ghKey = process.env.GITHUB_API_KEY;
+        const lovKey = process.env["LOVABLE_API_KEY"];
+        const ghKey = process.env["GITHUB_API_KEY"];
         if (!lovKey || !ghKey) {
           return Response.json({ error: "missing credentials" }, { status: 500 });
         }
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/api/public/push-certs")({
               "X-Connection-Api-Key": ghKey,
               "Content-Type": "application/json",
             },
-            body: body ? JSON.stringify(body) : undefined,
+            body: body ? JSON.stringify(body) : null,
           });
           const text = await res.text();
           if (!res.ok) {
