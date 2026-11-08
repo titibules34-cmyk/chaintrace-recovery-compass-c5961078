@@ -125,73 +125,73 @@ function AboutUs() {
         <span className="text-xs font-bold tracking-[.22em] text-blue-100/85">CYBER <span className="text-cyan-300">JUSTICE</span></span>
       </header>
 
-      <section className="mx-auto w-[min(100%,64rem)] pt-12 sm:pt-16">
+      <section className="mx-auto w-[min(100%,64rem)] pt-8 sm:pt-10">
         <div className="about-rise text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/[.08] px-4 py-1.5 text-[.68rem] font-bold tracking-[.2em] text-cyan-200">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.9)]" /> WHO WE ARE
           </span>
-          <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">About Us</h1>
-          <p className="mx-auto mt-4 max-w-3xl min-h-[3.5rem] text-lg font-semibold leading-snug text-blue-50/85 sm:min-h-0 sm:text-xl">
+          <h1 className="mt-4 text-2xl font-extrabold tracking-tight text-white sm:text-4xl">About Us</h1>
+          <p className="mx-auto mt-3 max-w-3xl min-h-[3.5rem] text-base font-semibold leading-snug text-blue-50/85 sm:min-h-0 sm:text-lg">
             Experts in{" "}
             <span className="block sm:inline"><span key={word} className="word-swap inline-block bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent">{EXPERT_WORDS[word]}</span></span>
           </p>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-blue-50/75 sm:text-base">
+          <p className="mx-auto mt-4 max-w-2xl text-xs leading-6 text-blue-50/75 sm:text-sm">
             Bringing clarity to complex digital investigations through intelligence, rigorous analysis and evidence-led action.
           </p>
         </div>
 
-        <div className="about-rise about-delay-1 mt-8 rounded-[2rem] border border-blue-200/20 bg-white/[.075] p-6 shadow-[0_24px_90px_rgba(0,0,0,.22)] backdrop-blur-xl sm:mt-10 sm:p-7">
+        <div className="about-rise about-delay-1 mt-6 rounded-[2rem] border border-blue-200/20 bg-white/[.075] p-5 shadow-[0_24px_90px_rgba(0,0,0,.22)] backdrop-blur-xl sm:mt-8 sm:p-6">
           <div className="flex items-start gap-4">
             <span className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200 sm:flex"><Scale className="h-6 w-6" /></span>
             <div>
-              <p className="text-base font-semibold leading-7 text-white sm:text-lg sm:leading-7">
+              <p className="text-sm font-semibold leading-6 text-white sm:text-base sm:leading-7">
                 Cyber Justice is a specialist cyber intelligence and digital investigations company. We help individuals, businesses and professional teams make sense of complex online activity, trace digital assets and develop clear investigative leads.
               </p>
-              <p className="mt-4 max-w-5xl leading-7 text-blue-50/85">
+              <p className="mt-3 max-w-5xl text-sm leading-6 text-blue-50/85">
                 Our work brings together asset tracing, cryptocurrency investigations, open-source research and cyber intelligence. We focus on careful analysis, transparent communication and practical findings — never promises of a guaranteed recovery or outcome.
               </p>
             </div>
           </div>
 
-          <div className="my-8 h-px bg-gradient-to-r from-transparent via-blue-200/25 to-transparent" />
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="my-6 h-px bg-gradient-to-r from-transparent via-blue-200/25 to-transparent" />
+          <div className="grid gap-6 md:grid-cols-2">
             <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-300/10 text-cyan-200"><ShieldCheck className="h-5 w-5" /></span>
-              <p className="leading-7 text-blue-50/90">
+              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-300/10 text-cyan-200"><ShieldCheck className="h-4 w-4" /></span>
+              <p className="text-sm leading-6 text-blue-50/90">
                 We combine <strong className="text-white">OSINT, HUMINT, cyber and financial intelligence</strong> with investigative tools to identify patterns, map connections and turn scattered information into actionable intelligence.
               </p>
             </div>
             <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-300/10 text-cyan-200"><FileCheck2 className="h-5 w-5" /></span>
-              <p className="leading-7 text-blue-50/90">
+              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-300/10 text-cyan-200"><FileCheck2 className="h-4 w-4" /></span>
+              <p className="text-sm leading-6 text-blue-50/90">
                 <strong className="text-white">Cyber Justice Ltd</strong> is registered in the United Kingdom (Company No. 16458332). We work with clients and professional advisers on digital matters that can cross borders and jurisdictions.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {metrics.map((metric, index) => (
-            <article key={metric.label} className={`about-rise rounded-3xl border border-blue-200/15 bg-white/[.055] p-6 text-center shadow-lg backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.09] about-delay-${index + 2}`}>
-              <p className="bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl">{metric.value}</p>
-              <h2 className="mt-3 text-sm font-bold text-white">{metric.label}</h2>
-              <p className="mt-2 text-xs leading-5 text-blue-50/75">{metric.detail}</p>
+            <article key={metric.label} className={`about-rise rounded-3xl border border-blue-200/15 bg-white/[.055] p-4 text-center shadow-lg backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.09] about-delay-${index + 2}`}>
+              <p className="bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-2xl font-extrabold tracking-tight text-transparent sm:text-3xl">{metric.value}</p>
+              <h2 className="mt-2 text-xs font-bold text-white">{metric.label}</h2>
+              <p className="mt-1.5 text-[.68rem] leading-4 text-blue-50/75">{metric.detail}</p>
             </article>
           ))}
         </div>
 
-        <section className="about-rise about-delay-5 mt-12">
+        <section className="about-rise about-delay-5 mt-10">
           <div className="text-center">
             <p className="text-[.68rem] font-bold tracking-[.22em] text-cyan-200">HOW WE WORK</p>
-            <h2 className="mt-3 text-2xl font-extrabold text-white sm:text-3xl">Clarity through intelligence.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-50/80">A disciplined approach that keeps the facts, the evidence and the client’s objectives at the centre.</p>
+            <h2 className="mt-2 text-xl font-extrabold text-white sm:text-2xl">Clarity through intelligence.</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-xs leading-5 text-blue-50/80">A disciplined approach that keeps the facts, the evidence and the client’s objectives at the centre.</p>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
             {principles.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="rounded-2xl border border-blue-200/15 bg-white/[.045] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-200"><Icon className="h-5 w-5" /></span>
-                <h3 className="mt-5 font-bold text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-blue-50/80">{text}</p>
+              <article key={title} className="rounded-2xl border border-blue-200/15 bg-white/[.045] p-4 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-200"><Icon className="h-4 w-4" /></span>
+                <h3 className="mt-3 text-sm font-bold text-white">{title}</h3>
+                <p className="mt-1.5 text-xs leading-5 text-blue-50/80">{text}</p>
               </article>
             ))}
           </div>
@@ -199,10 +199,10 @@ function AboutUs() {
 
 
 
-        <section className="about-rise mt-10 sm:mt-12">
-          <div className="grid items-center gap-6 rounded-[1.5rem] border border-blue-200/20 bg-white/[.065] p-5 shadow-[0_18px_55px_rgba(0,0,0,.18)] backdrop-blur-xl sm:p-6 lg:grid-cols-[.85fr_1.15fr] lg:gap-8 lg:p-7">
-            <div className="relative mx-auto flex w-full max-w-[22rem] items-center justify-center py-6">
-              <div className="absolute left-1/2 top-1/2 h-[17rem] w-[17rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[.08] blur-3xl" />
+        <section className="about-rise mt-8 sm:mt-10">
+          <div className="grid items-center gap-5 rounded-[1.5rem] border border-blue-200/20 bg-white/[.065] p-4 shadow-[0_18px_55px_rgba(0,0,0,.18)] backdrop-blur-xl sm:p-5 lg:grid-cols-[.85fr_1.15fr] lg:gap-6 lg:p-6">
+            <div className="relative mx-auto flex w-full max-w-[20rem] items-center justify-center py-4">
+              <div className="absolute left-1/2 top-1/2 h-[15rem] w-[15rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[.08] blur-3xl" />
               <div className="absolute left-1/2 top-2 z-10 -translate-x-1/2 rounded-full border border-cyan-200/20 bg-[#102b55]/95 px-3 py-1.5 text-[.58rem] font-bold tracking-wide text-cyan-100 shadow-xl backdrop-blur">
                 <span className="mr-2 text-cyan-300">✓</span> INTELLIGENCE-LED APPROACH
               </div>
@@ -242,34 +242,34 @@ function AboutUs() {
 
             <div className="relative">
               <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-3 py-1 text-[.58rem] font-bold tracking-[.18em] text-cyan-200">OUR APPROACH</span>
-              <h2 className="mt-4 text-xl font-extrabold leading-tight tracking-tight text-white sm:text-2xl">
+              <h2 className="mt-3 text-lg font-extrabold leading-tight tracking-tight text-white sm:text-xl">
                 Our Approach to <span className="bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent">Asset Recovery</span>
               </h2>
-              <p className="mt-3 text-xs leading-6 text-blue-50/85 sm:text-sm">
+              <p className="mt-2 text-xs leading-5 text-blue-50/85 sm:text-sm">
                 At Cyber Justice, asset recovery begins with understanding the facts. We investigate the movement of funds and assets, examine the people and entities connected to them, and build an intelligence picture that can help guide the next steps.
               </p>
-              <p className="mt-3 text-xs leading-6 text-blue-50/85 sm:text-sm">
+              <p className="mt-2 text-xs leading-5 text-blue-50/85 sm:text-sm">
                 Asset recovery investigations can involve complex wallet activity, multiple blockchain networks, company structures and cross-border connections. We combine <strong className="text-white">blockchain tracing, open-source research and financial intelligence</strong> to follow asset movements, identify potential leads and prepare clear findings for clients and their professional advisers.
               </p>
-              <p className="mt-4 text-sm leading-7 text-blue-50/85 sm:text-base">
+              <p className="mt-3 text-xs leading-5 text-blue-50/85 sm:text-sm">
                 Each case is different. Our structured process focuses on identifying, tracing and documenting potentially recoverable assets, giving clients and their legal teams clearer information when considering recovery options. We provide investigative intelligence, not guarantees of recovery.
               </p>
-              <a href="/#contact" className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2.5 text-xs font-bold text-white shadow-[0_10px_30px_rgba(14,165,233,.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(14,165,233,.38)]">
+              <a href="/#contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-2 text-xs font-bold text-white shadow-[0_10px_30px_rgba(14,165,233,.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(14,165,233,.38)]">
                 Discuss Your Case <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </div>
         </section>
 
-        <section className="about-rise mt-14 sm:mt-16">
+        <section className="about-rise mt-10 sm:mt-12">
           <div className="text-center">
             <p className="text-[.68rem] font-bold tracking-[.22em] text-cyan-200">INVESTIGATIVE &amp; FORENSIC CAPABILITIES</p>
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-white sm:text-4xl">Specialist Capabilities</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-blue-50/80 sm:text-base">
+            <h2 className="mt-2 text-xl font-extrabold tracking-tight text-white sm:text-2xl">Specialist Capabilities</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-xs leading-5 text-blue-50/80 sm:text-sm">
               Combining investigative methods, digital forensics and cross-border intelligence to bring clarity to complex cases.
             </p>
           </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map(({ icon: Icon, tag, title, text }, index) => (
               <article key={title} className={`group relative flex flex-col overflow-hidden rounded-2xl border border-blue-200/15 bg-white/[.055] shadow-[0_18px_60px_rgba(0,0,0,.16)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.085] p-4 sm:p-5 about-rise about-delay-${index + 1}`}>
                 <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-cyan-400/[.07] blur-3xl transition duration-500 group-hover:bg-cyan-300/[.14]" />
@@ -294,38 +294,38 @@ function AboutUs() {
           </div>
         </section>
 
-        <div className="about-rise mt-8 flex flex-col items-center justify-between gap-5 rounded-3xl border border-cyan-200/20 bg-gradient-to-r from-blue-500/10 to-cyan-400/[.08] p-5 text-center sm:flex-row sm:text-left sm:p-6">
+        <div className="about-rise mt-6 flex flex-col items-center justify-between gap-4 rounded-3xl border border-cyan-200/20 bg-gradient-to-r from-blue-500/10 to-cyan-400/[.08] p-4 text-center sm:flex-row sm:text-left sm:p-5">
           <div>
-            <h2 className="text-xl font-extrabold text-white sm:text-xl">Need clarity on a digital investigation?</h2>
-            <p className="mt-2 text-sm text-blue-50/80">Speak with our team about your situation and the evidence available.</p>
+            <h2 className="text-lg font-extrabold text-white">Need clarity on a digital investigation?</h2>
+            <p className="mt-1.5 text-xs text-blue-50/80">Speak with our team about your situation and the evidence available.</p>
           </div>
-          <a href="/#contact" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_8px_30px_rgba(34,211,238,.2)] transition hover:-translate-y-0.5 hover:bg-cyan-200">
+          <a href="/#contact" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-cyan-300 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-[0_8px_30px_rgba(34,211,238,.2)] transition hover:-translate-y-0.5 hover:bg-cyan-200">
             Contact Cyber Justice <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </section>
 
-      <section className="about-rise mt-12 border-y border-blue-200/10 py-10 sm:mt-14 sm:py-12" aria-label="Accreditations and certifications">
+      <section className="about-rise mt-10 border-y border-blue-200/10 py-8 sm:mt-12 sm:py-10" aria-label="Accreditations and certifications">
         <div className="mx-auto w-[min(100%,64rem)]">
           <div className="text-center">
             <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-4 py-1.5 text-[.65rem] font-bold tracking-[.18em] text-cyan-200">CREDENTIALS &amp; RECOGNITION</span>
-            <h2 className="mt-4 text-2xl font-extrabold text-white sm:text-3xl">Certificates &amp; Affiliations</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-50/80">
+            <h2 className="mt-3 text-xl font-extrabold text-white sm:text-2xl">Certificates &amp; Affiliations</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-xs leading-5 text-blue-50/80">
               Professional credentials, industry affiliations and security-related marks displayed across Cyber Justice.
             </p>
           </div>
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <ul className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {certifications.map(([src, label], index) => (
-              <li key={label} className={`group flex min-h-28 items-center justify-center rounded-2xl border border-blue-200/15 bg-white/[.045] p-4 shadow-lg backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.08] about-rise about-delay-${(index % 5) + 1}`}>
-                <img src={src} alt={label} title={label} loading="lazy" width={816} height={816} className="h-14 w-auto max-w-full object-contain opacity-85 transition duration-300 group-hover:scale-105 group-hover:opacity-100" />
+              <li key={label} className={`group flex min-h-24 items-center justify-center rounded-2xl border border-blue-200/15 bg-white/[.045] p-3 shadow-lg backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.08] about-rise about-delay-${(index % 5) + 1}`}>
+                <img src={src} alt={label} title={label} loading="lazy" width={816} height={816} className="h-12 w-auto max-w-full object-contain opacity-85 transition duration-300 group-hover:scale-105 group-hover:opacity-100" />
               </li>
             ))}
           </ul>
         </div>
       </section>
 
-      <footer className="about-rise mt-10 border-t border-blue-200/15 pt-12 sm:mt-12">
-        <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
+      <footer className="about-rise mt-8 border-t border-blue-200/15 pt-8 sm:mt-10">
+        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>
             <p className="text-sm font-extrabold tracking-[.18em] text-white">CYBER <span className="text-cyan-300">JUSTICE</span></p>
             <p className="mt-3 max-w-xs text-sm leading-6 text-blue-50/75">
