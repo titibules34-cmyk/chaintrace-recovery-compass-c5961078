@@ -20,6 +20,7 @@ import certDuns from "@/assets/certs/duns.png";
 import certDmca from "@/assets/certs/dmca.png";
 import certAcfeMember from "@/assets/certs/acfe-member.png";
 import certAuthorizeNet from "@/assets/certs/authorize-net.png";
+import worldMapBg from "@/assets/world-map-blue.png.asset.json";
 
 const certifications: [string, string][] = [
   [certAcfeCfe, "Certified Fraud Examiner"],
@@ -109,7 +110,10 @@ function AboutUs() {
         .about-grid { background-image:linear-gradient(rgba(148,183,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(148,183,255,.045) 1px,transparent 1px); background-size:52px 52px; mask-image:linear-gradient(to bottom,black,transparent 88%); }
         @media (prefers-reduced-motion: reduce) { .about-rise,.about-orb,.about-float { animation:none; opacity:1; } .about-word { animation:none; opacity:0; } .about-word:first-child { opacity:1; } }
       `}</style>
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(43,120,220,.22),transparent_55%),linear-gradient(180deg,#081b3c_0%,#0b2048_55%,#081a39_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10">
+        <img src={worldMapBg.url} alt="" aria-hidden="true" className="h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,22,52,.62)_0%,rgba(8,28,64,.72)_55%,rgba(6,20,48,.82)_100%)]" />
+      </div>
       <div className="about-grid pointer-events-none absolute inset-0 -z-10" />
       <div className="about-orb pointer-events-none absolute -right-32 top-32 -z-10 h-80 w-80 rounded-full bg-blue-500/20 blur-[100px]" />
       <div className="about-float pointer-events-none absolute -left-24 top-[28rem] -z-10 h-72 w-72 rounded-full bg-cyan-400/10 blur-[90px]" />
@@ -118,7 +122,7 @@ function AboutUs() {
         <Link to="/" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.06] px-4 py-2 text-sm font-semibold text-blue-100 transition hover:bg-white/10">
           <ArrowLeft className="h-4 w-4" /> Back to home
         </Link>
-        <span className="text-xs font-bold tracking-[.22em] text-blue-200/70">CYBER <span className="text-cyan-300">JUSTICE</span></span>
+        <span className="text-xs font-bold tracking-[.22em] text-blue-100/85">CYBER <span className="text-cyan-300">JUSTICE</span></span>
       </header>
 
       <section className="mx-auto w-[min(100%,64rem)] pt-12 sm:pt-16">
@@ -127,11 +131,11 @@ function AboutUs() {
             <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.9)]" /> WHO WE ARE
           </span>
           <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-5xl">About Us</h1>
-          <p className="mx-auto mt-4 max-w-3xl min-h-[3.5rem] text-lg font-semibold leading-snug text-blue-100/75 sm:min-h-0 sm:text-xl">
+          <p className="mx-auto mt-4 max-w-3xl min-h-[3.5rem] text-lg font-semibold leading-snug text-blue-50/85 sm:min-h-0 sm:text-xl">
             Experts in{" "}
-            <span className="block sm:inline"><span key={word} className="word-swap inline-block bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">{EXPERT_WORDS[word]}</span></span>
+            <span className="block sm:inline"><span key={word} className="word-swap inline-block bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent">{EXPERT_WORDS[word]}</span></span>
           </p>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-blue-100/60 sm:text-base">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-blue-50/75 sm:text-base">
             Bringing clarity to complex digital investigations through intelligence, rigorous analysis and evidence-led action.
           </p>
         </div>
@@ -143,7 +147,7 @@ function AboutUs() {
               <p className="text-base font-semibold leading-7 text-white sm:text-lg sm:leading-7">
                 Cyber Justice is a specialist cyber intelligence and digital investigations company. We help individuals, businesses and professional teams make sense of complex online activity, trace digital assets and develop clear investigative leads.
               </p>
-              <p className="mt-4 max-w-5xl leading-7 text-blue-100/75">
+              <p className="mt-4 max-w-5xl leading-7 text-blue-50/85">
                 Our work brings together asset tracing, cryptocurrency investigations, open-source research and cyber intelligence. We focus on careful analysis, transparent communication and practical findings — never promises of a guaranteed recovery or outcome.
               </p>
             </div>
@@ -153,13 +157,13 @@ function AboutUs() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="flex items-start gap-4">
               <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-300/10 text-cyan-200"><ShieldCheck className="h-5 w-5" /></span>
-              <p className="leading-7 text-blue-100/80">
+              <p className="leading-7 text-blue-50/90">
                 We combine <strong className="text-white">OSINT, HUMINT, cyber and financial intelligence</strong> with investigative tools to identify patterns, map connections and turn scattered information into actionable intelligence.
               </p>
             </div>
             <div className="flex items-start gap-4">
               <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-300/10 text-cyan-200"><FileCheck2 className="h-5 w-5" /></span>
-              <p className="leading-7 text-blue-100/80">
+              <p className="leading-7 text-blue-50/90">
                 <strong className="text-white">Cyber Justice Ltd</strong> is registered in the United Kingdom (Company No. 16458332). We work with clients and professional advisers on digital matters that can cross borders and jurisdictions.
               </p>
             </div>
@@ -171,7 +175,7 @@ function AboutUs() {
             <article key={metric.label} className={`about-rise rounded-3xl border border-blue-200/15 bg-white/[.055] p-6 text-center shadow-lg backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.09] about-delay-${index + 2}`}>
               <p className="bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl">{metric.value}</p>
               <h2 className="mt-3 text-sm font-bold text-white">{metric.label}</h2>
-              <p className="mt-2 text-xs leading-5 text-blue-100/60">{metric.detail}</p>
+              <p className="mt-2 text-xs leading-5 text-blue-50/75">{metric.detail}</p>
             </article>
           ))}
         </div>
@@ -180,14 +184,14 @@ function AboutUs() {
           <div className="text-center">
             <p className="text-[.68rem] font-bold tracking-[.22em] text-cyan-200">HOW WE WORK</p>
             <h2 className="mt-3 text-2xl font-extrabold text-white sm:text-3xl">Clarity through intelligence.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-100/65">A disciplined approach that keeps the facts, the evidence and the client’s objectives at the centre.</p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-50/80">A disciplined approach that keeps the facts, the evidence and the client’s objectives at the centre.</p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {principles.map(({ icon: Icon, title, text }) => (
               <article key={title} className="rounded-2xl border border-blue-200/15 bg-white/[.045] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35">
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-200"><Icon className="h-5 w-5" /></span>
                 <h3 className="mt-5 font-bold text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-blue-100/65">{text}</p>
+                <p className="mt-2 text-sm leading-6 text-blue-50/80">{text}</p>
               </article>
             ))}
           </div>
@@ -239,15 +243,15 @@ function AboutUs() {
             <div className="relative">
               <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-3 py-1 text-[.58rem] font-bold tracking-[.18em] text-cyan-200">OUR APPROACH</span>
               <h2 className="mt-4 text-xl font-extrabold leading-tight tracking-tight text-white sm:text-2xl">
-                Our Approach to <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">Asset Recovery</span>
+                Our Approach to <span className="bg-gradient-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent">Asset Recovery</span>
               </h2>
-              <p className="mt-3 text-xs leading-6 text-blue-100/75 sm:text-sm">
+              <p className="mt-3 text-xs leading-6 text-blue-50/85 sm:text-sm">
                 At Cyber Justice, asset recovery begins with understanding the facts. We investigate the movement of funds and assets, examine the people and entities connected to them, and build an intelligence picture that can help guide the next steps.
               </p>
-              <p className="mt-3 text-xs leading-6 text-blue-100/75 sm:text-sm">
+              <p className="mt-3 text-xs leading-6 text-blue-50/85 sm:text-sm">
                 Asset recovery investigations can involve complex wallet activity, multiple blockchain networks, company structures and cross-border connections. We combine <strong className="text-white">blockchain tracing, open-source research and financial intelligence</strong> to follow asset movements, identify potential leads and prepare clear findings for clients and their professional advisers.
               </p>
-              <p className="mt-4 text-sm leading-7 text-blue-100/75 sm:text-base">
+              <p className="mt-4 text-sm leading-7 text-blue-50/85 sm:text-base">
                 Each case is different. Our structured process focuses on identifying, tracing and documenting potentially recoverable assets, giving clients and their legal teams clearer information when considering recovery options. We provide investigative intelligence, not guarantees of recovery.
               </p>
               <a href="/#contact" className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2.5 text-xs font-bold text-white shadow-[0_10px_30px_rgba(14,165,233,.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_14px_38px_rgba(14,165,233,.38)]">
@@ -261,7 +265,7 @@ function AboutUs() {
           <div className="text-center">
             <p className="text-[.68rem] font-bold tracking-[.22em] text-cyan-200">INVESTIGATIVE &amp; FORENSIC CAPABILITIES</p>
             <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-white sm:text-4xl">Specialist Capabilities</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-blue-100/65 sm:text-base">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-blue-50/80 sm:text-base">
               Combining investigative methods, digital forensics and cross-border intelligence to bring clarity to complex cases.
             </p>
           </div>
@@ -282,7 +286,7 @@ function AboutUs() {
                     </div>
                   </div>
                   <h3 className="text-base font-bold text-white">{title}</h3>
-                  <p className="mt-2 text-xs leading-5 text-blue-100/65">{text}</p>
+                  <p className="mt-2 text-xs leading-5 text-blue-50/80">{text}</p>
                   <div className="mt-3 h-px w-10 bg-gradient-to-r from-cyan-300/70 to-transparent transition-all duration-500 group-hover:w-24" />
                 </div>
               </article>
@@ -293,7 +297,7 @@ function AboutUs() {
         <div className="about-rise mt-8 flex flex-col items-center justify-between gap-5 rounded-3xl border border-cyan-200/20 bg-gradient-to-r from-blue-500/10 to-cyan-400/[.08] p-5 text-center sm:flex-row sm:text-left sm:p-6">
           <div>
             <h2 className="text-xl font-extrabold text-white sm:text-xl">Need clarity on a digital investigation?</h2>
-            <p className="mt-2 text-sm text-blue-100/65">Speak with our team about your situation and the evidence available.</p>
+            <p className="mt-2 text-sm text-blue-50/80">Speak with our team about your situation and the evidence available.</p>
           </div>
           <a href="/#contact" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_8px_30px_rgba(34,211,238,.2)] transition hover:-translate-y-0.5 hover:bg-cyan-200">
             Contact Cyber Justice <ArrowRight className="h-4 w-4" />
@@ -306,7 +310,7 @@ function AboutUs() {
           <div className="text-center">
             <span className="inline-flex rounded-full border border-cyan-200/20 bg-cyan-300/[.08] px-4 py-1.5 text-[.65rem] font-bold tracking-[.18em] text-cyan-200">CREDENTIALS &amp; RECOGNITION</span>
             <h2 className="mt-4 text-2xl font-extrabold text-white sm:text-3xl">Certificates &amp; Affiliations</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-100/65">
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-blue-50/80">
               Professional credentials, industry affiliations and security-related marks displayed across Cyber Justice.
             </p>
           </div>
@@ -324,14 +328,14 @@ function AboutUs() {
         <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
           <div>
             <p className="text-sm font-extrabold tracking-[.18em] text-white">CYBER <span className="text-cyan-300">JUSTICE</span></p>
-            <p className="mt-3 max-w-xs text-sm leading-6 text-blue-100/60">
+            <p className="mt-3 max-w-xs text-sm leading-6 text-blue-50/75">
               Cyber intelligence, digital investigations and asset recovery intelligence — bringing clarity to complex digital matters.
             </p>
-            <p className="mt-4 text-xs leading-5 text-blue-100/45">Cyber Justice Ltd · Company No. 16458332 · United Kingdom</p>
+            <p className="mt-4 text-xs leading-5 text-blue-100/65">Cyber Justice Ltd · Company No. 16458332 · United Kingdom</p>
           </div>
           <nav aria-label="Quick links">
             <p className="text-[.68rem] font-bold tracking-[.2em] text-cyan-200">QUICK LINKS</p>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-blue-100/65">
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-blue-50/80">
               <li><Link to="/" className="transition hover:text-cyan-200">Home</Link></li>
               <li><a href="/#services" className="transition hover:text-cyan-200">All Services</a></li>
               <li><a href="/#tools" className="transition hover:text-cyan-200">Cyber Tools</a></li>
@@ -341,7 +345,7 @@ function AboutUs() {
           </nav>
           <nav aria-label="Services">
             <p className="text-[.68rem] font-bold tracking-[.2em] text-cyan-200">SERVICES</p>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-blue-100/65">
+            <ul className="mt-4 flex flex-col gap-3 text-sm text-blue-50/80">
               <li><Link to="/asset-recovery" className="transition hover:text-cyan-200">Asset Tracing &amp; Investigations</Link></li>
               <li><Link to="/cyber-intelligence" className="transition hover:text-cyan-200">Cyber Intelligence Services</Link></li>
               <li><Link to="/cyber-investigation-team" className="transition hover:text-cyan-200">Cyber Investigation Team</Link></li>
@@ -350,7 +354,7 @@ function AboutUs() {
           </nav>
           <div>
             <p className="text-[.68rem] font-bold tracking-[.2em] text-cyan-200">COMPANY DETAILS</p>
-            <dl className="mt-4 flex flex-col gap-3 text-xs text-blue-100/60">
+            <dl className="mt-4 flex flex-col gap-3 text-xs text-blue-50/75">
               <div className="flex justify-between gap-3 border-b border-blue-100/10 pb-2"><dt>Company number</dt><dd className="font-semibold text-blue-50">16458332</dd></div>
               <div className="flex justify-between gap-3 border-b border-blue-100/10 pb-2"><dt>Incorporated</dt><dd className="font-semibold text-blue-50">19 May 2025</dd></div>
               <div className="flex justify-between gap-3 border-b border-blue-100/10 pb-2"><dt>Status</dt><dd className="font-semibold text-blue-50">Active</dd></div>
@@ -360,7 +364,7 @@ function AboutUs() {
             </a>
           </div>
         </div>
-        <div className="mt-8 border-t border-blue-200/10 py-5 text-center text-[.68rem] text-blue-100/45">
+        <div className="mt-8 border-t border-blue-200/10 py-5 text-center text-[.68rem] text-blue-100/65">
           © {new Date().getFullYear()} Cyber Justice Ltd · No recovery outcome is guaranteed · Not legal or financial advice.
         </div>
       </footer>
