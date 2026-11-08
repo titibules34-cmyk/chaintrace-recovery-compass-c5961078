@@ -62,25 +62,25 @@ export function CyberInvestigationTeam() {
             From the first digital lead to expert evidence and recovery planning, our specialists connect the detail.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map(([title, text], i) => (
-            <article key={title} className={`group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-glow ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}>
-              <div className="absolute right-0 top-0 h-28 w-28 rounded-bl-full bg-primary/[0.04] transition group-hover:bg-primary/[0.09]" />
+            <article key={title} className={`group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card p-4 transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-glow`}>
+              <div className="absolute right-0 top-0 h-16 w-16 rounded-bl-full bg-primary/[0.04] transition group-hover:bg-primary/[0.09]" />
               <div className="relative flex items-center justify-between">
                 {(() => {
                   const Icon = icons[i] ?? Globe;
                   return (
-                    <span className="grid h-12 w-12 place-items-center rounded-xl border border-primary/15 bg-primary/10 text-primary">
-                      <Icon className="h-6 w-6" strokeWidth={1.75} />
+                    <span className="grid h-9 w-9 place-items-center rounded-lg border border-primary/15 bg-primary/10 text-primary">
+                      <Icon className="h-4 w-4" strokeWidth={1.75} />
                     </span>
                   );
                 })()}
                 <span className="font-mono text-xs tracking-[0.2em] text-muted-foreground/70">{String(i + 1).padStart(2, "0")}</span>
               </div>
-              <h3 className="relative mt-5 text-lg font-bold leading-snug sm:text-xl">{title}</h3>
-              <p className="relative mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
-              <div className="relative mt-auto pt-6">
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent">
+              <h3 className="relative mt-3 text-sm font-bold leading-snug">{title}</h3>
+              <p className="relative mt-2 text-xs leading-5 text-muted-foreground">{text}</p>
+              <div className="relative mt-auto pt-3">
+                <span className="inline-flex items-center gap-1 text-[0.65rem] font-semibold uppercase tracking-wider text-accent">
                   Specialist capability <span aria-hidden="true">↗</span>
                 </span>
               </div>
