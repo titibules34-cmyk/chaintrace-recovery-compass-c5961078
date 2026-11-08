@@ -215,6 +215,7 @@ function Index() {
           CYBER <span className="text-accent">JUSTICE</span>
         </a>
         <nav className="flex items-center gap-2 text-sm text-muted-foreground sm:gap-5">
+          <Link to="/about-us" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">About Us</Link>
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -329,7 +330,6 @@ function Index() {
               </a>
             </div>
           </div>
-          <Link to="/about-us" className="hidden rounded-full px-3 py-2 transition hover:bg-secondary hover:text-foreground sm:inline">About Us</Link>
           <a href="#contact" className="rounded-full bg-primary px-4 py-2 font-semibold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:opacity-90">Contact</a>
         </nav>
       </header>
