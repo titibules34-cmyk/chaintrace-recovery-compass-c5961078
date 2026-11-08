@@ -265,9 +265,9 @@ function AboutUs() {
               Combining investigative methods, digital forensics and cross-border intelligence to bring clarity to complex cases.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {capabilities.map(({ icon: Icon, tag, title, text }, index) => (
-              <article key={title} className={`group relative flex min-h-[22rem] flex-col overflow-hidden rounded-[1.75rem] border border-blue-200/15 bg-white/[.055] p-6 shadow-[0_18px_60px_rgba(0,0,0,.16)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.085] sm:p-8 about-rise about-delay-${index + 1}`}>
+              <article key={title} className={`group relative flex flex-col overflow-hidden rounded-2xl border border-blue-200/15 bg-white/[.055] shadow-[0_18px_60px_rgba(0,0,0,.16)] backdrop-blur-xl transition duration-500 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[.085] p-4 sm:p-5 about-rise about-delay-${index + 1}`}>
                 <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-cyan-400/[.07] blur-3xl transition duration-500 group-hover:bg-cyan-300/[.14]" />
                 <div className="relative flex items-center justify-between gap-4">
                   <span className="flex h-6 w-6 items-center justify-center rounded-lg border border-cyan-200/15 bg-cyan-300/10 text-cyan-200 transition duration-300 group-hover:scale-110 group-hover:bg-cyan-300/15">
@@ -275,15 +275,15 @@ function AboutUs() {
                   </span>
                   <span className="rounded-full border border-blue-200/15 bg-blue-300/[.08] px-3 py-1.5 text-[.58rem] font-bold tracking-[.13em] text-cyan-100/90">{tag}</span>
                 </div>
-                <div className="relative flex flex-1 flex-col justify-end pt-10">
-                  <div className="mb-3 flex h-10 items-center justify-center">
+                <div className="relative flex flex-1 flex-col pt-4">
+                  <div className="mb-3 hidden">
                     <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-200/15 bg-gradient-to-br from-cyan-300/15 to-blue-500/10 text-cyan-200 shadow-[0_0_50px_rgba(34,211,238,.08)] transition duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_55px_rgba(34,211,238,.18)]">
                       <Icon className="h-4 w-4 stroke-[1.6]" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white">{title}</h3>
-                  <p className="mt-3 max-w-xl text-sm leading-6 text-blue-100/65">{text}</p>
-                  <div className="mt-5 h-px w-12 bg-gradient-to-r from-cyan-300/70 to-transparent transition-all duration-500 group-hover:w-24" />
+                  <h3 className="text-base font-bold text-white">{title}</h3>
+                  <p className="mt-2 text-xs leading-5 text-blue-100/65">{text}</p>
+                  <div className="mt-3 h-px w-10 bg-gradient-to-r from-cyan-300/70 to-transparent transition-all duration-500 group-hover:w-24" />
                 </div>
               </article>
             ))}
